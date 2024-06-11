@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crassula | Support</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#56d3a2">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" href="../assets/vendor/vanilla-cookieconsent/dist/cookieconsent.css" media="print" onload="this.media='all'">   
+    <link rel="stylesheet" media="screen" href="../assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="../assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="../assets/vendor/img-comparison-slider/dist/styles.css"/>
+    <link rel="stylesheet" media="screen" href="../assets/vendor/aos/dist/aos.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-dark position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="../assets/img/home/logo-light.svg" width="148" alt="Grassula">
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+            <div class="offcanvas-header border-bottom border-light">
+              <h5 class="offcanvas-title text-white">Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-lg-center mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link" data-bs-toggle="dropdown">Key Features</a>
+                  <div class="dropdown-menu ms-lg-n5 p-0" style="max-width: 664px;">
+                    <div class="d-lg-flex mt-lg-n3">
+                      <div class="mega-dropdown-column mt-lg-3 py-lg-3">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="cards.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-card"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Cards</span>
+                                Enhance your Horizons
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="price-lists.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-dollar"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Price Lists &amp; Fees</span>
+                                Maximize your Profits
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="accounts.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-account"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Accounts</span>
+                                Set a Flexible Business Model
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="transfers.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-transfer"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Transfers</span>
+                                Payments Without Borders
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="currency-exchange.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-connection"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Currency Exchange</span>
+                                Manage and Control All Requests
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="crypto.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-bitcoin"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Crypto</span>
+                                Innovate and Earn
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="mega-dropdown-column mt-lg-3 py-lg-3">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="dashboard.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-bar-chart"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Dashboard</span>
+                                Oversee, Manage and Control
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="white-labeled-uls.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-cards"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">White Labeled UIs</span>
+                                Shorten your Time to Market
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="compliance-and-security.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-security"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Compliance &amp; Security</span>
+                                Stay Compliant and Secure
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="support.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-customer-service"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Support</span>
+                                Use Our Knowledge and Touch
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="api.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-code"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">API</span>
+                                Embed and Distribute
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="merchant-payments.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-layer"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Merchant Payments</span>
+                                Enhance your Abilities
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link" data-bs-toggle="dropdown">Solutions</a>
+                  <div class="dropdown-menu ms-lg-n5 p-0" style="max-width: 664px;">
+                    <div class="d-lg-flex mt-lg-n3">
+                      <div class="mega-dropdown-column mt-lg-3 py-lg-3">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="#" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <img src="../assets/img/navbar-icons/challenger.svg" alt="logo" class="me-2">
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Challenger Banks</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <img src="../assets/img/navbar-icons/railsbank.svg" alt="logo" class="me-2">
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Railsbank</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <img src="../assets/img/navbar-icons/clearbank.svg" alt="logo" class="me-2">
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">ClearBank</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Marketplace</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link" data-bs-toggle="dropdown">Resources</a>
+                  <div class="dropdown-menu ms-lg-n5 p-0" style="max-width: 664px;">
+                    <div class="d-lg-flex mt-lg-n3">
+                      <div class="mega-dropdown-column mt-lg-3 py-lg-3">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="about.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-code"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Developers</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="career.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-layer"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Guides</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="contact.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-chapter"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Blog</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link" data-bs-toggle="dropdown">Company</a>
+                  <div class="dropdown-menu ms-lg-n5 p-0" style="max-width: 664px;">
+                    <div class="d-lg-flex mt-lg-n3">
+                      <div class="mega-dropdown-column mt-lg-3 py-lg-3">
+                        <ul class="list-unstyled mb-0">
+                          <li>
+                            <a href="about.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-lines"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">About us</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="career.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-briefcase"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Careers</span>
+                              </span>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="contact.html" class="dropdown-item d-flex align-items-center mx-1 py-2 px-3 rounded-3">
+                              <span class="icon-box icon-box-xs bg-secondary me-2">
+                                <i class="cri-send"></i>
+                              </span>
+                              <span class="d-block ps-1">
+                                <span class="dropdown-menu-title d-block h6 mb-0">Contact Us</span>
+                              </span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top border-light">
+              <a href="#" class="btn btn-primary w-100">
+                Request demo
+              </a>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="#" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex rounded-pill ms-lg-4">
+            Request demo
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Hero section with layer parallax gfx -->
+      <section class="d-flex align-items-center position-relative overflow-hidden pt-5 pb-lg-5 bg-dark min-vh-100">
+        <div class="container pt-5">
+          <div class="row gy-5 align-items-center py-lg-5">
+            <div class="col-lg-6 text-center text-lg-start">
+              <div class="mx-lg-0 mx-auto" style="max-width: 526px;">
+                <span class="badge bg-faded-light text-light fw-normal mb-4 py-2 px-3">Key Features</span>
+                <h1 class="display-3 text-light">Support</h1>
+                <p class="text-light opacity-70 mt-3 mb-0 fs-lg">Here when you need us. Get a dedicated Customer Manager, benefit from industry experience and rely on Service Level Agreements (SLAs). Get peace of mind about the product and focus on the growth and development of your business. Tackling issues up front is of utmost importance for Crassula. We&apos;re always at your disposal when you most need help.</p>
+                <a href="#" class="btn btn-lg btn-outline-accent rounded-pill mt-5">
+                  Request demo
+                  <i class="bx bx-chevron-right ms-1 lead"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Layer parallax -->
+            <div class="col-lg-6">
+              <div class="parallax position-relative ms-auto me-lg-0 me-auto pb-lg-0 mb-lg-0 mb-5 pb-sm-5" style="max-width: 636px;">
+                <div class="parallax-layer zindex-1" data-depth="0.05">
+                  <img src="../assets/img/support/hero/01.png" alt="Layer">
+                </div>
+                <div class="parallax-layer zindex-2" data-depth="0.15">
+                  <img src="../assets/img/support/hero/02.png" alt="Layer">
+                </div>
+                <div class="parallax-layer zindex-3" data-depth="-0.17">
+                  <img src="../assets/img/support/hero/03.png" alt="Layer">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Content -->
+      <section class="container my-lg-5 my-md-4 my-3 py-5">
+        <div class="d-flex flex-column my-xxl-4 my-xl-3 py-xxl-2">
+
+          <!-- Items grid -->
+          <div class="order-lg-1 order-2 row row-cols-lg-3 row-cols-1 gy-md-5 gy-4 gx-xl-5 mb-lg-5 pb-xxl-2">
+
+            <!-- Item -->
+            <div class="col">
+              <h3 class="h2 mb-md-4 mb-3">Customer Manager</h3>
+              <p class="mb-0 fs-xl">Your success is our success, that's why we always proactively work with your daily requests and arrange a dedicated manager or team to help your business grow.</p>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <h3 class="h2 mb-md-4 mb-3">Industry Experience</h3>
+              <p class="mb-0 fs-xl">With constant improvements, regular participation in top industry events and working with the latest features, we stay up-to-date to understand your business needs.</p>
+            </div>
+
+            <!-- Item -->
+            <div class="col">
+              <h3 class="h2 mb-md-4 mb-3">Service Level Agreements</h3>
+              <p class="mb-0 fs-xl">Guaranteed performance levels allow you to get peace of mind about the product and focus on growt and development of your business.</p>
+            </div>
+          </div>
+
+          <!-- Illustration -->
+          <div class="order-lg-2 order-1 rounded bg-secondary mb-lg-0 mb-md-5 mb-4 pb-md-0 pb-2">
+            <img src="../assets/img/support/illustration.png" alt="Illustration" class="d-md-block d-none">
+            <img src="../assets/img/support/illustration-m.png" alt="Illustration" class="d-md-none d-block">
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CTA -->
+      <section class="container mb-lg-5 mb-3 pt-xxl-2 pb-4">
+        <div class="card border-0 bg-position-center bg-size-cover bg-repeat-0 bg-dark text-light">
+          <div class="card-body my-lg-5 my-3 mx-auto py-5 text-center" style="max-width: 624px;">
+            <h2 class="display-4 mb-4 pb-2 text-light">Create a digital bank in a matter of days</h2>
+            <a href="#" class="btn btn-lg btn-accent mb-5">
+              Request demo
+              <i class="bx bxs-chevron-right ms-1"></i>
+            </a>
+            <div>
+              <img src="../assets/img/home/cta/logos.png" width="104" alt="Companies" class="mb-2">
+              <div>
+                <b class="fs-lg">150+</b>
+                <span class="opacity-70">companies already with us</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="container py-lg-5 py-4">
+      <div class="row gy-lg-5 gy-4 mb-md-5 mb-3 pb-2">
+        <div class="col-md-4 mb-lg-0 mb-3">
+          <img src="../assets/img/home/logo-dark.svg" alt="Crassula" class="mb-md-4 mb-2">
+          <div>
+
+            <!-- App Store button -->
+            <a href="#" class="btn btn-dark btn-lg mt-3 px-3 py-2 rounded-pill" style="min-width: 174px;">
+              <img src="../assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
+              <img src="../assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
+            </a>
+
+            <br>
+
+            <!-- Google Play button -->
+            <a href="#" class="btn btn-dark btn-lg mt-3 px-3 py-2 rounded-pill" style="min-width: 174px;">
+              <img src="../assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
+              <img src="../assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <h6 class="mb-2 pb-1">Solution</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Challenger Banks</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Railsbank</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">ClearBank</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <h6 class="mb-2 pb-1">Developers</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Overview</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Banking API</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Checkout doc</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">REST API doc</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <h6 class="mb-2 pb-1">Resources</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Blog</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Case Studies</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 col-sm-3">
+          <h6 class="mb-2 pb-1">Company</h6>
+          <ul class="nav flex-column">
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Career</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">For partners</a></li>
+            <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 py-1 fw-normal">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top pt-4 pb-3 text-lg-start text-center">
+        <div class="d-flex flex-lg-row flex-column align-items-center justify-content-lg-between justify-content-center pt-lg-2">
+          <div>
+            <ul class="nav justify-content-lg-start justify-content-center mx-sm-n3 mb-2">
+              <li class="nav-item"><a href="#" class="nav-link me-lg-1 px-3 fw-normal">Privacy Policy</a></li>
+              <li class="nav-item"><a href="#" class="nav-link me-lg-1 px-3 fw-normal">Terms of Use</a></li>
+              <li class="nav-item"><a href="#" class="nav-link me-lg-1 px-3 fw-normal">Data Protection Policy</a></li>
+            </ul>
+            <p class="mb-0 text-muted">CRASSULA SIA designs and operates the Crassula website and mobile application.</p>
+            <p class="mb-0 text-muted">Crassula is a registered Trademark of CRATECH LTD, and may not be used or reproduced without the consent of the owner.</p>
+          </div>
+          <div class="mt-lg-n3 ms-n3">
+            <a href="#" class="btn btn-icon btn-secondary btn-facebook mt-3 ms-3">
+              <i class="bx bxl-facebook-square"></i>
+            </a>
+            <a href="#" class="btn btn-icon btn-secondary btn-twitter mt-3 ms-3">
+              <i class="bx bxl-twitter"></i>
+            </a>
+            <a href="#" class="btn btn-icon btn-secondary btn-instagram mt-3 ms-3">
+              <i class="bx bxl-instagram"></i>
+            </a>
+            <a href="#" class="btn btn-icon btn-secondary btn-telegram mt-3 ms-3">
+              <i class="bx bxl-telegram"></i>
+            </a>
+            <a href="#" class="btn btn-icon btn-secondary btn-medium mt-3 ms-3">
+              <i class="bx bxl-medium"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script defer src="../assets/vendor/vanilla-cookieconsent/dist/cookieconsent.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="../assets/vendor/parallax-js/dist/parallax.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/img-comparison-slider/dist/index.js"></script>
+    <script src="../assets/vendor/aos/dist/aos.js"></script>
+    <script src="../assets/vendor/rellax/rellax.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="../assets/js/theme.min.js"></script>
+
+    <!-- Cookies usage plugin settings -->
+    <!-- Based on https://github.com/orestbida/cookieconsent -->
+    <script>
+      window.addEventListener('load', function(){
+
+          // obtain plugin
+          var cc = initCookieConsent();
+
+          // run plugin with your configuration
+          cc.run({
+              current_lang: 'en',
+              autoclear_cookies: true,                   // default: false
+              page_scripts: true,                        // default: false
+              gui_options: {
+                  consent_modal: {
+                      layout: 'box',                 // box/cloud/bar
+                      position: 'bottom right',      // bottom/middle/top + left/right/center
+                      transition: 'slide',           // zoom/slide
+                      swap_buttons: false            // enable to invert buttons
+                  },
+                  settings_modal: {
+                      layout: 'box',                 // box/bar
+                      // position: 'left',           // left/right
+                      transition: 'slide'            // zoom/slide
+                  }
+              },
+              languages: {
+                  'en': {
+                      consent_modal: {
+                          title: 'Cookie Policy',
+                          description: 'We use <button type="button" data-cc="c-settings" class="cc-link">cookies</button> to ensure the accessibility and functioning of our services, to analyze our visitors behavior and to personalize their experience.',
+                          primary_btn: {
+                              text: 'Accept all',
+                              role: 'accept_all'              // 'accept_selected' or 'accept_all'
+                          },
+                          secondary_btn: {
+                              text: 'Decline',
+                              role: 'accept_necessary'        // 'settings' or 'accept_necessary'
+                          }
+                      },
+                      settings_modal: {
+                          title: 'Cookie preferences',
+                          save_settings_btn: 'Save settings',
+                          accept_all_btn: 'Accept all',
+                          reject_all_btn: 'Reject all',
+                          close_btn_label: 'Close',
+                          cookie_table_headers: [
+                              {col1: 'Name'},
+                              {col2: 'Domain'},
+                              {col3: 'Expiration'},
+                              {col4: 'Description'}
+                          ],
+                          blocks: [
+                              {
+                                  title: 'Cookie usage 📢',
+                                  description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
+                              }, {
+                                  title: 'Strictly necessary cookies',
+                                  description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
+                                  toggle: {
+                                      value: 'necessary',
+                                      enabled: true,
+                                      readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
+                                  }
+                              }, {
+                                  title: 'Performance and Analytics cookies',
+                                  description: 'These cookies allow the website to remember the choices you have made in the past',
+                                  toggle: {
+                                      value: 'analytics',     // your cookie category
+                                      enabled: false,
+                                      readonly: false
+                                  },
+                                  cookie_table: [             // list of all expected cookies
+                                      {
+                                          col1: '^_ga',       // match all cookies starting with "_ga"
+                                          col2: 'google.com',
+                                          col3: '2 years',
+                                          col4: 'description ...',
+                                          is_regex: true
+                                      },
+                                      {
+                                          col1: '_gid',
+                                          col2: 'google.com',
+                                          col3: '1 day',
+                                          col4: 'description ...',
+                                      }
+                                  ]
+                              }, {
+                                  title: 'Advertisement and Targeting cookies',
+                                  description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
+                                  toggle: {
+                                      value: 'targeting',
+                                      enabled: false,
+                                      readonly: false
+                                  }
+                              }, {
+                                  title: 'More information',
+                                  description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
+                              }
+                          ]
+                      }
+                  }
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Crassula | Request Demo</title>
+
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Createx Studio">
+
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#56d3a2">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" href="assets/vendor/vanilla-cookieconsent/dist/cookieconsent.css" media="print" onload="this.media='all'">   
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+      <section class="container-fluid px-0 overflow-hidden">
+        <div class="row g-0">
+
+          <!--  -->
+          <div class="col-xl-5 col-lg-6 position-lg-fixed top-0 start-0">
+            <div class="request-screen dark-mode position-relative bg-dark d-flex align-items-center h-100 p-sm-5 p-4">
+              <div class="p-3">
+                <a href="index.html" class="d-inline-block position-absolute top-0 start-0 m-sm-5 m-4 p-3">
+                  <img src="assets/img/home/logo-light.svg" width="196" alt="Crassula" class="d-sm-block d-none">
+                  <img src="assets/img/home/logo-light.svg" width="130" alt="Crassula" class="d-sm-none d-block">
+                </a>
+                <div style="max-width: 570px;" class="pt-5">
+                  <h1 class="display-5 mb-4 pb-md-2 mt-4 pt-2">Create a <span class="text-primary">digital bank</span> in a matter of days</h1>
+                  <p class="mb-4 pb-2 fs-lg">“Crassula's product allowed us to quickly launch a payment business. A huge advantage is the availability of integrations with many banks and acquirers, which makes it possible to quickly connect new payment methods for customers.”</p>
+                  <div class="d-sm-flex align-items-center mt-n3 ms-n4">
+                    <a href="#" class="d-inline-block mt-3 ms-4">
+                      <img src="assets/img/request-demo/safe-currency.svg" alt="Logo">
+                    </a>
+                    <a href="#" class="d-sm-inline-block d-none mt-3 ms-4">
+                      <img src="assets/img/request-demo/paysend.svg" alt="Logo">
+                    </a>
+                    <a href="#" class="d-sm-inline-block d-none mt-3 ms-4">
+                      <img src="assets/img/request-demo/clearbank.svg" alt="Logo">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="request-shape d-lg-block d-none position-absolute start-50 translate-middle-x bg-position-bottom-center bg-size-contain bg-repeat-0" style="background-image: url(assets/img/request-demo/shape.svg);"></div>
+            </div>
+          </div>
+
+          <!--  -->
+          <div class="col-xl-5 col-lg-6 offset-lg-6 p-sm-5 p-4">
+            <div class="p-lg-0 p-3">
+              <h2 class="h1 mb-2 pb-1">Request demo</h2>
+              <p class="mb-4 pb-2">Please fill in this form to help us understand and address your needs.</p>
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+              <script>
+                hbspt.forms.create({
+                  region: "na1",
+                  portalId: "2931084",
+                  formId: "4b584ca3-d55f-4f31-979a-5b7e9f3b30f0"
+                });
+              </script>
+              <ul class="nav mb-0 ms-n4 pt-md-5 pt-3">
+                <li class="nav-item ms-4 me-2 mt-2">
+                  <a href="#" class="nav-link p-0 fw-normal">
+                    <u>Privacy Policy</u>
+                  </a>
+                </li>
+                <li class="nav-item ms-4 me-2 mt-2">
+                  <a href="#" class="nav-link p-0 fw-normal">
+                    <u>Terms of Use Data Protection Policy</u>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script defer src="assets/vendor/vanilla-cookieconsent/dist/cookieconsent.js"></script>
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+
+    <!-- Cookies usage plugin settings -->
+    <!-- Based on https://github.com/orestbida/cookieconsent -->
+    <script>
+      window.addEventListener('load', function(){
+
+          // obtain plugin
+          var cc = initCookieConsent();
+
+          // run plugin with your configuration
+          cc.run({
+              current_lang: 'en',
+              autoclear_cookies: true,                   // default: false
+              page_scripts: true,                        // default: false
+              gui_options: {
+                  consent_modal: {
+                      layout: 'box',                 // box/cloud/bar
+                      position: 'bottom right',      // bottom/middle/top + left/right/center
+                      transition: 'slide',           // zoom/slide
+                      swap_buttons: false            // enable to invert buttons
+                  },
+                  settings_modal: {
+                      layout: 'box',                 // box/bar
+                      // position: 'left',           // left/right
+                      transition: 'slide'            // zoom/slide
+                  }
+              },
+              languages: {
+                  'en': {
+                      consent_modal: {
+                          title: 'Cookie Policy',
+                          description: 'We use <button type="button" data-cc="c-settings" class="cc-link">cookies</button> to ensure the accessibility and functioning of our services, to analyze our visitors behavior and to personalize their experience.',
+                          primary_btn: {
+                              text: 'Accept all',
+                              role: 'accept_all'              // 'accept_selected' or 'accept_all'
+                          },
+                          secondary_btn: {
+                              text: 'Decline',
+                              role: 'accept_necessary'        // 'settings' or 'accept_necessary'
+                          }
+                      },
+                      settings_modal: {
+                          title: 'Cookie preferences',
+                          save_settings_btn: 'Save settings',
+                          accept_all_btn: 'Accept all',
+                          reject_all_btn: 'Reject all',
+                          close_btn_label: 'Close',
+                          cookie_table_headers: [
+                              {col1: 'Name'},
+                              {col2: 'Domain'},
+                              {col3: 'Expiration'},
+                              {col4: 'Description'}
+                          ],
+                          blocks: [
+                              {
+                                  title: 'Cookie usage 📢',
+                                  description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
+                              }, {
+                                  title: 'Strictly necessary cookies',
+                                  description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
+                                  toggle: {
+                                      value: 'necessary',
+                                      enabled: true,
+                                      readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
+                                  }
+                              }, {
+                                  title: 'Performance and Analytics cookies',
+                                  description: 'These cookies allow the website to remember the choices you have made in the past',
+                                  toggle: {
+                                      value: 'analytics',     // your cookie category
+                                      enabled: false,
+                                      readonly: false
+                                  },
+                                  cookie_table: [             // list of all expected cookies
+                                      {
+                                          col1: '^_ga',       // match all cookies starting with "_ga"
+                                          col2: 'google.com',
+                                          col3: '2 years',
+                                          col4: 'description ...',
+                                          is_regex: true
+                                      },
+                                      {
+                                          col1: '_gid',
+                                          col2: 'google.com',
+                                          col3: '1 day',
+                                          col4: 'description ...',
+                                      }
+                                  ]
+                              }, {
+                                  title: 'Advertisement and Targeting cookies',
+                                  description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
+                                  toggle: {
+                                      value: 'targeting',
+                                      enabled: false,
+                                      readonly: false
+                                  }
+                              }, {
+                                  title: 'More information',
+                                  description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
+                              }
+                          ]
+                      }
+                  }
+              }
+          });
+      });
+    </script>
+  </body>
+</html>
